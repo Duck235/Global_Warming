@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Случайный Факт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdf6e3;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ff9800;
+            color: white;
+            padding: 20px 0;
+        }
+        main {
+            padding: 40px 20px;
+        }
+        .fact-box {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 0 auto;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        a.button:hover {
+            background-color: #e68a00;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+    </header>
+    <main>
+        {% if random_fact %}
+        <div class="fact-box">
+            <p>{{ random_fact }}</p>
+        </div>
+        {% endif %}  
+        <a class="button" href="/random_fact">Показать другой факт</a>
+        <br><br>
+        <a class="button" href="/">На главную</a>
+    </main>
+
+    
+    
+</body>
+</html>
